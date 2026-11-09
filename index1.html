@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блочная модель CSS</title>
+
+    <style>
+        /* Общие настройки */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F8FAFC;
+            color: #1E293B;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Задание 1: Карточка товара */
+        .product-card {
+            width: 320px;
+            box-sizing: border-box;
+            padding: 24px;
+            border: 1px solid #E2E8F0;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            background-color: white;
+        }
+
+        .product-card h2 {
+            margin-top: 0;
+            color: #7C3AED;
+        }
+
+        .product-card button {
+            background-color: #7C3AED;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* Задание 2: Центрированный контейнер */
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Задание 3: Margin Collapse */
+        .box-one {
+            background-color: #DBEAFE;
+            padding: 20px;
+            margin-bottom: 40px;
+        }
+
+        .box-two {
+            background-color: #DCFCE7;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* Способ предотвращения схлопывания */
+        .no-collapse {
+            display: flow-root;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>Блочная модель CSS</h1>
+
+        <!-- Задание 1 -->
+        <h2>Задание 1. Карточка товара</h2>
+
+        <div class="product-card">
+            <h2>Смартфон</h2>
+            <p>Современный смартфон с качественной камерой
+            и большим экраном.</p>
+            <p><strong>Цена: 25 000 ₽</strong></p>
+            <button>Купить</button>
+        </div>
+
+        <!-- Задание 2 -->
+        <h2>Задание 2. Центрированный контейнер</h2>
+
+        <p>
+            Этот текст находится внутри центрированного
+            контейнера с максимальной шириной 1200px.
+            При уменьшении экрана контент адаптируется
+            под ширину устройства.
+        </p>
+
+        <!-- Задание 3 -->
+        <h2>Задание 3. Схлопывание отступов</h2>
+
+        <div class="box-one">
+            Верхний блок: margin-bottom: 40px;
+        </div>
+
+        <div class="box-two">
+            Нижний блок: margin-top: 30px;
+        </div>
+
+        <h2>Предотвращение Margin Collapse</h2>
+
+        <div class="no-collapse">
+            <div class="box-one">
+                Первый блок внутри контейнера.
+            </div>
+
+            <div class="box-two">
+                Второй блок внутри контейнера.
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>
